@@ -23,4 +23,5 @@ public class Esfera : MonoBehaviour
 }
 ```
 A continuación un gif de la ejecución de la escena:
-![gif acciones](./Practica1_II.gif)
+<div align="center">
+<img src=./Practica1_II.gif alt= "gif">
