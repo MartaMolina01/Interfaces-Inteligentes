@@ -27,3 +27,7 @@ public class Esfera : MonoBehaviour
 A continuación un gif de la ejecución de la escena:
 <div align="center">
 <img src=./Practica1_II.gif alt= "gif">
+
+Assets actualmente descargados:
+
+![assets](./assets.png)
