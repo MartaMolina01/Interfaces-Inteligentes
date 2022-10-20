@@ -5,11 +5,11 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#Ejercicio 1">Ejercicio 1</a></li>
+    <li><a href="#ejercicio-1">Ejercicio 1</a></li>
     <li>
-      <a href="#Ejercicio 2">Ejercicio 2</a>
+      <a href="#ejercicio-2">Ejercicio 2</a>
     </li>
-    <li><a href="#Ejercicio 3">Ejercicio 3</a></li>
+    <li><a href="#ejercicio-3">Ejercicio 3</a></li>
   </ol>
 </details>
 
