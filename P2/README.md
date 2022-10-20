@@ -14,6 +14,9 @@
 </details>
 
 ## Ejercicio 1
+### A
+Ninguno de los objetos es físico:
+![img1](./data/P2_1a)
 
 ## Ejercicio 2
 
