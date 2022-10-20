@@ -44,7 +44,7 @@ Esfera física y el cubo es de tipo trigger
 ![img7](./data/P2_1e.gif)
 
 ### F
-La esfera tiene físicas y el cubo además de rigid, tiene físicas (activadas como anteriormente con el rigibody)
+La esfera tiene físicas y el cubo además de trigger, tiene físicas (activadas como anteriormente con el rigibody)
 
 ![img8](./data/P2_1f.gif)
 
