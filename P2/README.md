@@ -130,7 +130,7 @@ public class CharacterController : MonoBehaviour
     }
 ```
 
-c.
+b.
 
 ``` C#
 using System.Collections;
@@ -164,3 +164,5 @@ public class Cilindro : MonoBehaviour
     }
 }
 ```
+
+c. Igual q el b pero sin la condición Input.GetKey("space")
