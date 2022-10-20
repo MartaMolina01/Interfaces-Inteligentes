@@ -100,6 +100,8 @@ public class CharacterController : MonoBehaviour
 }
 ```
 
+![img11](./data/P2_2.gif)
+
 ## Ejercicio 3
 Código primer apartado:
 
