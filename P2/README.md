@@ -39,7 +39,7 @@ Ambos son físicos y la esfera tiene 10 veces la masa del cubo
 ### E
 Esfera física y el cubo es de tipo trigger
 
-![img6](./data/cubo_trigg.png)
+![img6](./data/p2_xz.png)
 
 ![img7](./data/P2_1e.gif)
 
