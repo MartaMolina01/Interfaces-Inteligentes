@@ -16,7 +16,47 @@
 ## Ejercicio 1
 ### A
 Ninguno de los objetos es físico:
-![img1](./data/P2_1a)
+
+![img1](./data/P2_1a.gif)
+
+### B
+La esfera es física gracias a Component > Physics > Rigidbody
+
+![img2](./data/P2_1b.gif)
+
+### C
+Ambos objetos tienen físicas
+
+![img3](./data/P2_1c.gif)
+
+### D
+Ambos son físicos y la esfera tiene 10 veces la masa del cubo
+
+![img4](./data/Masa_esfera.png)
+
+![img5](./data/P2_1d.gif)
+
+### E
+Esfera física y el cubo es de tipo trigger
+
+![img6](./data/cubo_trigg.png)
+
+![img7](./data/P2_1e.gif)
+
+### F
+La esfera tiene físicas y el cubo además de rigid, tiene físicas (activadas como anteriormente con el rigibody)
+
+![img8](./data/P2_1f.gif)
+
+### G
+La esfera, con una masa 10 veces mayor a la del cubo, y el cubo son físicos. Se impide la rotación del cubo sobre el plano XZ.
+
+La masa se aumenta en el inspector como anteriormente se mostró.
+
+![img9](./data/P2_cubo.png)
+
+![img10](./data/P2_1g.gif)
+
 
 ## Ejercicio 2
 
