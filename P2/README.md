@@ -60,6 +60,12 @@ La masa se aumenta en el inspector como anteriormente se mostró.
 
 ## Ejercicio 2
 
+El jugador (cubo) se mueve por los ejes ya creados horizontales y verticales. Hay dos campos públicos de velocidad: uno para el desplazamiento y otro para la rotación.
+
+![img12](./data/P2_cubo.png)
+
+En Y_r vemos el valor entre -1 y 1 asignado para el giro continuo del jugador.
+
 Código: 
 
 ``` C#
@@ -100,11 +106,13 @@ public class CharacterController : MonoBehaviour
 }
 ```
 
-![img11](./data/P2_2.gif)
+![img12](./data/P2_2.gif)
 
 ## Ejercicio 3
-Código primer apartado:
+### Primer apartado:
+Varios cilindros que aumentan su tamaño cuando el jugador (cubo) colisione con ellos y el jugador aumenta su puntuación.
 
+Código:
 ``` C#
 using System.Collections;
 using System.Collections.Generic;
@@ -175,8 +183,16 @@ public class CharacterController : MonoBehaviour
     }
 ```
 
-b.
+![img13](./data/P2_3a.gif)
 
+### Segundo apartado:
+Al acercarse el jugador, si la barra espaciadora está pulsada, uno de los cilindors se aleja del mismo gracias a la condición 
+
+``` C#
+Input.GetKey("space")
+```
+
+Código:
 ``` C#
 using System.Collections;
 using System.Collections.Generic;
@@ -210,8 +226,50 @@ public class Cilindro : MonoBehaviour
 }
 ```
 
-c. Igual q el b pero sin la condición Input.GetKey("space")
+![img14](./data/P2_3b.gif)
 
+### Tercer apartado:
+Otro de los cilindros de la escena se aleja por un simple acercamiento del jugador. Es el mísmo código que el apartado anterior pero no hay necesidad de la condición que incluye la barra espaciadora.
+
+``` C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Cilindro2 : MonoBehaviour
+{
+
+    private Transform transf;
+    public float fuerza = 5F;
+    private GameObject cubo;
+    private double cerca = 2;
+    private Rigidbody rigid;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        transf = GetComponent<Transform>();
+        cubo = GameObject.FindWithTag("Cubo");
+        rigid = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Vector3.Distance(transf.position, cubo.transform.position) < cerca){
+            Vector3 direction = transf.position - cubo.transform.position;
+            rigid.AddForce(direction * fuerza);
+        }
+    }
+}
+```
+
+![img15](./data/P2_3c.gif)
+
+### Cuarto apartado:
+Una nueva figura (esfera) que es capaz de detectar colisiones tiene además un eje nuevo
+
+Código:
 ``` C#
 using System.Collections;
 using System.Collections.Generic;
@@ -252,3 +310,62 @@ public class Esfera : MonoBehaviour
     }
 }
 ```
+
+El movimiento de esta esfera se muestra en el gif del quinto apartado. A continuación una imagen de los nuevos ejes:
+
+![img16](./data/Nuevos_ejes.png)
+
+### Quinto apartado:
+Se sitúan nuevos cubos además del jugador y cuando este se acerca, disminuyen su tamaño. Cuando se acerca la esfera, aumentan de tamaño.
+
+Código añadido al jugador (cubo):
+``` C#
+//Declaración
+private GameObject cubo1;
+private GameObject cubo2;
+
+//En la función Start
+cubo1 = GameObject.FindWithTag("Cubo1");
+cubo2 = GameObject.FindWithTag("Cubo2");
+
+//En la función OnCollisionEnter
+if(Vector3.Distance(transform.position, cubo1.transform.position) < choque){
+    Debug.Log("Ha chocado el cubo con cubo atras");
+    cubo1.transform.localScale /= aumento;
+}
+
+if(Vector3.Distance(transform.position, cubo2.transform.position) < choque){
+    Debug.Log("Ha chocado el cubo con cubo izquierda");
+    cubo2.transform.localScale /= aumento;
+}
+```
+
+Código añadido a la esfera:
+``` C#
+//Declaración
+private GameObject cubo1;
+private GameObject cubo2;
+public float aumento = 1.05F;
+private double choque = 1.5;
+
+//En la función Start
+cubo1 = GameObject.FindWithTag("Cubo1");
+cubo2 = GameObject.FindWithTag("Cubo2");
+
+void OnCollisionEnter()
+{
+    Debug.Log("La esfera ha colisionado");
+
+    if(Vector3.Distance(transform.position, cubo1.transform.position) < choque){
+        Debug.Log("Ha chocado el esfera con cubo atras");
+        cubo1.transform.localScale *= aumento;
+    }
+
+    if(Vector3.Distance(transform.position, cubo2.transform.position) < choque){
+        Debug.Log("Ha chocado el esfera con cubo izquierda");
+        cubo2.transform.localScale *= aumento;
+    }
+}
+```
+
+![img17](./data/P2_3d.gif)
