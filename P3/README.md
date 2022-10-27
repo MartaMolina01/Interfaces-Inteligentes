@@ -36,7 +36,7 @@ void OnCollisionEnter(Collision objeto)
 
 Al colisionar con B, los objetos A se acercan al C:
 
-![gif](P3_colisionB.gif)
+![gif](./img/P3_colisionB.gif)
 
 Para conseguir esto en el script de los objetos A añadimos un evento en el start:
 
@@ -54,7 +54,7 @@ void movimiento_a_C()
 
 Cuando el jugador colisiona con un objeto A, el tamaño de los objetos B se incrementa:
 
-![gif](P3_colisionA.gif)
+![gif](./img/P3_colisionA.gif)
 
 ```C#
 notificador.colisionA += incrementoB;
@@ -69,7 +69,7 @@ La colisión se detecta de la misma forma que se mencionó en la primera parte d
 
 Finalmente cuando un objeto se aproxima al objeto C, los de tipo A cambian de color, en este caso al azul y saltan, y los objetos de tipo B se orientan hacia un objetivo, el cilindro azul.
 
-![gif](P3_aproxC.gif)
+![gif](./img/P3_aproxC.gif)
 
 En este caso la notificación de la aproximación del jugador sale de la función Update:
 
