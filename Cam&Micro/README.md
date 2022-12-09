@@ -3,5 +3,5 @@
 
 Muestra de la cámara:
 
-![Camara&Micro](Cam&Mic.gif)
+![Camara&Micro](./img/Cam&Mic.gif)
 
