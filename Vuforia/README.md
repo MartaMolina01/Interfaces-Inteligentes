@@ -1,3 +1,3 @@
 # Interfaces Inteligentes
 ## Práctica Vuforia
-### MArta Molina Fernández
+### Marta Molina Fernández
