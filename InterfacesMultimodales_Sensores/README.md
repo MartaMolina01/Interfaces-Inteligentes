@@ -6,4 +6,4 @@ Todo el código lo encontramos en [compass.cs](https://github.com/MartaMolina01/
 
 Video demostrativo:
 
-![video](./Sensores.mp4)
+![video](./sensores.mp4)
